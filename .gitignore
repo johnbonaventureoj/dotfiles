@@ -5,6 +5,7 @@
 
 # --- Top-level allowlist ---
 !/.gitignore
+!/README.md
 !/.gitconfig
 !/.wslconfig
 !/.config
