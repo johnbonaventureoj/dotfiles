@@ -1,0 +1,24 @@
+# Dotfiles repo: ignore everything by default, allowlist specific
+# config files/dirs explicitly. This keeps caches, app state, personal
+# documents, and credentials out of version control by default.
+/*
+
+# --- Top-level allowlist ---
+!/.gitignore
+!/.gitconfig
+!/.wslconfig
+!/.config
+!/.claude
+
+# --- .config: only the git ignore file ---
+/.config/*
+!/.config/git
+/.config/git/*
+!/.config/git/ignore
+
+# --- .claude: only the small local settings file ---
+# Everything else here (.credentials.json, history.jsonl, sessions/,
+# projects/, cache/, backups/, plugins/, etc.) is runtime state or
+# holds OAuth/API credentials and must stay untracked.
+/.claude/*
+!/.claude/settings.json
