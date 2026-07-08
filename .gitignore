@@ -5,6 +5,7 @@
 
 # --- Top-level allowlist ---
 !/.gitignore
+!/.gitattributes
 !/README.md
 !/LICENSE
 !/.gitconfig
